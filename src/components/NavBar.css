@@ -1,0 +1,102 @@
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+a, a:hover, a:focus{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+a {
+    background-color: #d0c1fa;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem ;
+    border-radius: 0.2rem;
+    color: #3d2e8b;
+    animation: slideBack ease 0.5s;
+    -webkit-animation: slideBack ease 0.5s;
+    -moz-animation: slideBack ease 0.5s;
+    -o-animation: slideBack ease 0.5s;
+    -ms-animation: slideBack ease 0.5s;
+}
+
+
+.sidebar-header{
+    color: #c6f8fc;
+}
+
+@keyframes slideBack {
+    0% {margin-left: 20px;}
+    100% {margin-left: 0;}
+}
+
+@-moz-keyframes slideBack {
+    0% {margin-left: 20px;}
+    100% {margin-left: 0;}
+}
+
+@-webkit-keyframes slideBack {
+    0% {margin-left: 20px;}
+    100% {margin-left: 0;}
+}
+
+@-o-keyframes slideBack {
+    0% {margin-left: 20px;}
+    100% {margin-left: 0;}
+}
+
+@-ms-keyframes slideBack {
+    0% {margin-left: 20px;}
+    100% {margin-left: 0;}
+}
+
+a:hover {
+    margin-left: 20px;
+    color: #baaeff;
+    background-color: #6751a3;
+    animation: slideRight ease 0.1s;
+    -webkit-animation: slideRight ease 0.1s;
+    -moz-animation: slideRight ease 0.1s;
+    -o-animation: slideRight ease 0.1s;
+    -ms-animation: slideRight ease 0.1s;
+}
+
+a:focus{
+    background-color: #8551a3;
+    color: #cfc6ff;
+}
+
+@keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 20px;}
+}
+
+@-moz-keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 20px;}
+}
+
+@-webkit-keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 20px;}
+}
+
+@-o-keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 20px;}
+}
+
+@-ms-keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 20px;}
+}
+
+
+
+
+
+
