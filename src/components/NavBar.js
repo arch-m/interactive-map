@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from './awa.png'
 import {
   Link
 } from "react-router-dom";
@@ -11,8 +12,9 @@ export const NavBar = () => {
     <>
       <nav id="sidebar" className={`${active ? Style.active : Style.show} d-flex flex-column navbar-light bg-light `}>
         <div className="sidebar-header p-2 d-flex bg-secondary">
-          <div>
-            <h3>AWA</h3>
+          <div className="ps-1 d-flex justify-content-center align-items-center">
+            <img id="sidebar-icon" src={logo} alt="Icono de AWA"/>
+            <h3 className="m-0 mb-1 px-2">AWA</h3>
           </div>
           <div className="ms-auto">
             <button class="mx-0 navbar-toggler" onClick={() => setActive(!active)} type="button">
@@ -43,9 +45,9 @@ export const NavBar = () => {
           </ul>
         </div>
         <div class="mt-auto px-2 text-secondary">
-          <div>
-            <p>IPN Escuela Superior de Cómputo 2021</p>
-          </div>
+          <h5>Instituto Politécnico Nacional </h5>
+          <p class="mb-1">Escuela Superior de Cómputo</p>
+          <p>2021</p>
         </div>
       </nav>
     </>

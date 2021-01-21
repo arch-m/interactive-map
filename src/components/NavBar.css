@@ -24,9 +24,12 @@ a {
     -ms-animation: slideBack ease 0.5s;
 }
 
-
 .sidebar-header{
     color: #c6f8fc;
+}
+
+#sidebar-icon{
+    height: calc(1.3rem + 0.6vw);
 }
 
 @keyframes slideBack {

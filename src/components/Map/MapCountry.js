@@ -8,6 +8,7 @@ export const MapCountry = () => {
         x="0px" 
         y="0px" 
         viewBox="0 0 936.3 587.8"
+        style={{maxHeight:"100vh"}}
       >
         <MapStateList />
       </svg>
