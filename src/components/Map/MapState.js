@@ -3,13 +3,13 @@ import { useModal } from '../../hooks/useModal';
 import { Card } from '../Card/Card';
 import './style(temporal).css';
 
-export const MapState = ({id, d, name, description}) => {
+export const MapState = ({id, d, name, description, color}) => {
 
   const {isShowing, toggle} = useModal();
   
   return (
     <>
-      <path id={ id } stroke={ '#FFFFFF' }  strokeWidth={ 0.5 } style={ { fill: '#CCCCCC' } } d={ d } onClick={ toggle } />
+      <path id={ id } stroke={ '#9c9a9a' }  strokeWidth={ 1 } style={ { fill: color } } d={ d } onClick={ toggle } />
       <Card
         name={ name }
         description={ description }         

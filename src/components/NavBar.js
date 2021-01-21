@@ -44,7 +44,7 @@ export const NavBar = () => {
             }
           </ul>
         </div>
-        <div class="mt-auto px-2 text-secondary">
+        <div className={`sidebar-footer mt-auto px-2 text-secondary ${active && Style.hidden}`}>
           <h5>Instituto Politécnico Nacional </h5>
           <p class="mb-1">Escuela Superior de Cómputo</p>
           <p>2021</p>
