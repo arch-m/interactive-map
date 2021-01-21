@@ -1,12 +1,12 @@
 import React from 'react';
-import { useFetchData } from '../../hooks/useFetchGifs';
+import { useFetchStatesData } from '../../hooks/useFetchData';
 import { MapState } from './MapState';
 
 
 
 export const MapStateList = () => {
 
-  const { data:states, loading } = useFetchData();
+  const { data:states, loading } = useFetchStatesData();
 
   return (
     <>
