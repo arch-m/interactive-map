@@ -33,6 +33,10 @@ a {
     color: #6C1D45 !important;
 }
 
+.toggler:focus{
+    border: none !important;
+}
+
 #sidebar-icon{
     height: calc(1.3rem + 0.6vw);
 }

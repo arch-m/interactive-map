@@ -1,4 +1,4 @@
- export const colors = [
+const colors = [
     "#fff5ba" ,
     "#ffcbc1" ,
     "#ffbebc" ,
@@ -32,3 +32,9 @@
     "#ffffba" ,
     "#baffc9" ,
     "#bae1ff" ]
+
+const getRandomColor = () => {
+   return colors[Math.floor(Math.random()*colors.length)]
+}
+
+export default getRandomColor

@@ -9,12 +9,13 @@ export const MapState = ({id, d, name, description, color}) => {
   
   return (
     <>
-      <path id={ id } stroke={ '#9c9a9a' }  strokeWidth={ 1 } style={ { fill: color } } d={ d } onClick={ toggle } />
+      <path id={ id } className="pth" stroke={ '#9c9a9a' }  strokeWidth={ 1 } style={ { fill: color } } d={ d } onClick={ toggle } />
       <Card
         name={ name }
         description={ description }         
         isShowing={isShowing}
         hide={toggle}
+        color={color}
       />
     </>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from './awa.png'
+import { RiMenuFill } from 'react-icons/ri'
+import logo from './awa2.png'
 import {
   Link
 } from "react-router-dom";
@@ -10,15 +11,15 @@ export const NavBar = () => {
   const [active, setActive] = useState(false)
   return (
     <>
-      <nav id="sidebar" className={`${active ? Style.active : Style.show} d-flex flex-column navbar-light bg-light `}>
+      <nav id="sidebar" className={`${active ? Style.active : Style.show} d-flex flex-column bg-light`}>
         <div className="sidebar-header p-2 d-flex bg-secondary">
-          <div className="ps-1 d-flex justify-content-center align-items-center">
-            <img id="sidebar-icon" src={logo} alt="Icono de AWA"/>
+          <div className="ms-1 d-flex justify-content-center align-items-center">
+            <img id="sidebar-icon" src={logo} alt="Icono de AWA" />
             <h3 className="m-0 mb-1 px-2">AWA</h3>
           </div>
           <div className="ms-auto">
-            <button class="mx-0 navbar-toggler" onClick={() => setActive(!active)} type="button">
-              <span class="navbar-toggler-icon"></span>
+            <button className={Style.btn} onClick={() => setActive(!active)} type="button">
+              <RiMenuFill /> 
             </button>
           </div>
         </div>
@@ -46,7 +47,7 @@ export const NavBar = () => {
         </div>
         <div className={`sidebar-footer mt-auto px-2 text-secondary ${active && Style.hidden}`}>
           <h5>Instituto Politécnico Nacional </h5>
-          <p class="mb-1">Escuela Superior de Cómputo</p>
+          <p className="mb-1">Escuela Superior de Cómputo</p>
           <p>2021</p>
         </div>
       </nav>
