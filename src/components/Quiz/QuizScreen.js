@@ -7,12 +7,9 @@ export const QuizScreen = () => {
 
   const { data:questions, loading } = useFetchQuestionsData();
 
-  if(!loading) 
-    console.log(questions);
-
   return (
     <>
-    { !loading && <Quiz questions={ questions }/>}
+    { !loading && <Quiz key={ questions.questionText } questions={ questions }/>}
       
     </>
   );
