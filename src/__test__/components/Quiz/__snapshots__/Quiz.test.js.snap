@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas a Quiz Debe mostrar el componente correctamente 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="question-section"
+  >
+    <div
+      className="question-count"
+    >
+      <span>
+        Question 
+        1
+      </span>
+      /
+      2
+    </div>
+    <div
+      className="question-text"
+    >
+      Pregunta 1
+    </div>
+  </div>
+  <div
+    className="answer-section"
+  >
+    <button
+      key="respuesta 1"
+      onClick={[Function]}
+    >
+      respuesta 1
+    </button>
+    <button
+      key="respuesta 2"
+      onClick={[Function]}
+    >
+      respuesta 2
+    </button>
+    <button
+      key="respuesta 3"
+      onClick={[Function]}
+    >
+      respuesta 3
+    </button>
+    <button
+      key="respuesta 4"
+      onClick={[Function]}
+    >
+      respuesta 4
+    </button>
+  </div>
+</div>
+`;

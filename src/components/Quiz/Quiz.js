@@ -31,23 +31,23 @@ export default function Quiz({ questions }) {
         </h1>
       ) : (
           <>
-            <div>
-              <h1 className={Style.header}>
-                Pregunta {currentQuestion + 1}/{questions.length}
-              </h1>
-              <h2 className={Style.question}>
-                {questions[currentQuestion].questionText}
-              </h2>
-            </div>
-            <div className={`row row-cols-2 ${Style.answers}`}>
+          <div>
+            <h1 className={Style.header}>
+              Pregunta {currentQuestion + 1}/{questions.length}
+            </h1>
+            <h2 className={Style.question}>
+              {questions[currentQuestion].questionText}
+            </h2>
+          </div>
+          <div className={`row row-cols-2 ${Style.answers}`}>
               {questions[currentQuestion].answerOptions.map((answerOption) =>
                 <div className="p-0 py-3 px-3 col">
-                  <button className={`btn ${Style.btnResp}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                  <button key={answerOption.answerText} className={`btn ${Style.btnResp}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                 </div>
               )}
             </div>
           </>
-        )}
+      )}
     </div>
   );
 

@@ -37,12 +37,6 @@ export const NavBar = () => {
             <li>
               <Link to="/referencias">Referencias</Link>
             </li>
-            {
-              /* <li>
-              <Link to="/enciclopedia">Enciclopedia</Link> Componente pendiente por dificultad de realizacion, necesita filtros y
-              queries para la busqueda de datos, ademas de necesitar uso de hooks de memorizacion para efeciencia
-              </li> */
-            }
           </ul>
         </div>
         <div className={`sidebar-footer mt-auto px-2 text-secondary ${active && Style.hidden}`}>
