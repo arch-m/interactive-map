@@ -1,17 +1,17 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: 100vh;
+    max-height: 100vh;
     z-index: 1;
 }
 
 a, a:hover, a:focus{
-    display: block;
-    width: 100%;
     text-decoration: none;
 }
 
-a {
+#sidebar a {
+    display: block;
+    width: 100%;
     background-color: #d0c1fa;
     padding: 0.5rem 2rem;
     margin-bottom: 0.4rem;
@@ -66,9 +66,9 @@ a {
     100% {margin-left: 0;}
 }
 
-a:hover {
+#sidebar a:hover {
     margin-left: 20px;
-    color: #baaeff;
+    color: #ece8ff;
     background-color: #6751a3;
     animation: slideRight ease 0.1s;
     -webkit-animation: slideRight ease 0.1s;
@@ -77,9 +77,9 @@ a:hover {
     -ms-animation: slideRight ease 0.1s;
 }
 
-a:focus{
+#sidebar a:focus{
     background-color: #8551a3;
-    color: #cfc6ff;
+    color: #ece8ff;
 }
 
 @keyframes slideRight {

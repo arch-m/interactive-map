@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModal } from '../../hooks/useModal';
 import { Card } from '../Card/Card';
-import './style(temporal).css';
+import './MapState.css';
 
 export const MapState = ({id, d, name, description, color}) => {
 

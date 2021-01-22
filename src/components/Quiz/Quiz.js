@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import getRandomColor from '../Map/Colors'
+import Style from './QuizScreen.module.css'
 
 export default function Quiz({ questions }) {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
+  const backgroundStyle = {
+    background: `linear-gradient(167deg, ${getRandomColor("pasteles")} 0%, ${getRandomColor("solidos")} 100%)`,
+  }
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -19,26 +24,30 @@ export default function Quiz({ questions }) {
     }
   };
   return (
-    <div className='app'>
+    <div style={backgroundStyle} className='h-100 d-flex flex-column justify-content-center align-items-center' >
       {showScore ? (
-        <div className='score-section'>
-          You scored {score} out of {questions.length}
-        </div>
+        <h1 className={Style.header} Style>
+          Resolviste bien {score} de {questions.length}!
+        </h1>
       ) : (
-        <>
-          <div className='question-section'>
-            <div className='question-count'>
-              <span>Question {currentQuestion + 1}</span>/{questions.length}
+          <>
+            <div>
+              <h1 className={Style.header}>
+                Pregunta {currentQuestion + 1}/{questions.length}
+              </h1>
+              <h2 className={Style.question}>
+                {questions[currentQuestion].questionText}
+              </h2>
             </div>
-            <div className='question-text'>{questions[currentQuestion].questionText}</div>
-          </div>
-          <div className='answer-section'>
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-            ))}
-          </div>
-        </>
-      )}
+            <div className={`row row-cols-2 ${Style.answers}`}>
+              {questions[currentQuestion].answerOptions.map((answerOption) =>
+                <div className="p-0 py-3 px-3 col">
+                  <button className={`btn ${Style.btnResp}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                </div>
+              )}
+            </div>
+          </>
+        )}
     </div>
   );
 

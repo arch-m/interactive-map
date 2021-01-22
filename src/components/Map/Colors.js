@@ -1,4 +1,4 @@
-const colors = [
+const pasteles = [
     "#fff5ba" ,
     "#ffcbc1" ,
     "#ffbebc" ,
@@ -33,8 +33,21 @@ const colors = [
     "#baffc9" ,
     "#bae1ff" ]
 
-const getRandomColor = () => {
-   return colors[Math.floor(Math.random()*colors.length)]
+const solidos = [
+    "#6930c3" ,
+    "#f58634" ,
+    "#23689b" ,
+    "#c0e218" ,
+    "#61b15a" ,
+]
+
+const getRandomColor = (paleta) => {
+    if(paleta === "pasteles"){
+        return pasteles[Math.floor(Math.random()*pasteles.length)]
+    } else if(paleta === "solidos"){
+        return solidos[Math.floor(Math.random()*solidos.length)]
+    }
+   
 }
 
 export default getRandomColor
