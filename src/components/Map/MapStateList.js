@@ -17,7 +17,7 @@ export const MapStateList = () => {
         states.map(state => (
           <MapState 
             key={ state.id }
-            color={ getRandomColor() }
+            color={ getRandomColor("pasteles") }
             { ...state } 
           />
         ))
