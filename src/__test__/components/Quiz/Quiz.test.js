@@ -3,8 +3,6 @@ import Quiz from "../../../components/Quiz/Quiz";
 
 describe('Pruebas a Quiz', () => {
 
-  const handleAnswerOptionClick = jest.fn();
-
   const questions = [
     {
       questionText: 'Pregunta 1',
@@ -27,18 +25,20 @@ describe('Pruebas a Quiz', () => {
   ];
   const wrapper = shallow(<Quiz questions={ questions } />);
 
-  test('Debe mostrar el componente correctamente', () => {
-    expect ( wrapper ).toMatchSnapshot();
+  test('Debe mostrarse una pregunta y cuatro posibles respuestas', () => {
+    expect(  wrapper.find('h2').text().trim() ).toEqual('Pregunta 1');
+    expect(  wrapper.find('button') ).toHaveLength(4);
   });
-
-  test('Debe llamar cambiar el estado de la pregunta actual cuando se selecciona una respuesta', () => {
-
-    wrapper.find('button').at(1).prop('onClick')();
-
-    // expect( setCurrentQuestion ).toHaveBeenCalled();
-    expect( handleAnswerOptionClick ).toHaveBeenCalled();
-
-  })
   
 
-})
+  test('Debe pasar a la pregunta siguiente cuando se selecciona una respuesta', () => {
+    wrapper.find('button').at(1).prop('onClick')();
+    expect(  wrapper.find('h2').text().trim() ).toEqual('Pregunta 2');
+  });
+  
+  test('Debe mostrar el score al contestar todas las preguntas', () => {
+    wrapper.find('button').at(1).prop('onClick')();
+    expect(  wrapper.find('h1').text().trim() ).toEqual('Resolviste bien 2 de 2!');
+  });
+
+});

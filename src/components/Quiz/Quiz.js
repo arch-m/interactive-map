@@ -41,8 +41,8 @@ export default function Quiz({ questions }) {
           </div>
           <div className={`row row-cols-2 ${Style.answers}`}>
               {questions[currentQuestion].answerOptions.map((answerOption) =>
-                <div className="p-0 py-3 px-3 col">
-                  <button key={answerOption.answerText} className={`btn ${Style.btnResp}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                <div key={answerOption.answerText}  className="p-0 py-3 px-3 col">
+                  <button className={`btn ${Style.btnResp}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                 </div>
               )}
             </div>

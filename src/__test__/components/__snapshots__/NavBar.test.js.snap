@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas a NavBar Debe mostrarse correctamente 1`] = `
+<Fragment>
+  <nav
+    className="show d-flex flex-column bg-light"
+    id="sidebar"
+  >
+    <div
+      className="sidebar-header p-2 d-flex bg-secondary"
+    >
+      <div
+        className="ms-1 d-flex justify-content-center align-items-center"
+      >
+        <img
+          alt="Icono de AWA"
+          id="sidebar-icon"
+          src="awa2.png"
+        />
+        <h3
+          className="m-0 mb-1 px-2"
+        >
+          AWA
+        </h3>
+      </div>
+      <div
+        className="ms-auto"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+        >
+          <RiMenuFill />
+        </button>
+      </div>
+    </div>
+    <div
+      className="p-2 false"
+    >
+      <div
+        className="text-secondary p-2 my-3"
+      >
+        <h4>
+          Geografía de México
+        </h4>
+      </div>
+      <ul
+        className="list-unstyled components"
+      >
+        <li>
+          <Link
+            to="/"
+          >
+            Mapa Interactivo
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/cuestionarios"
+          >
+            Cuestionarios
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/referencias"
+          >
+            Referencias
+          </Link>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="sidebar-footer mt-auto px-2 text-secondary false"
+    >
+      <h5>
+        Instituto Politécnico Nacional 
+      </h5>
+      <p
+        className="mb-1"
+      >
+        Escuela Superior de Cómputo
+      </p>
+      <p>
+        2021
+      </p>
+    </div>
+  </nav>
+</Fragment>
+`;
