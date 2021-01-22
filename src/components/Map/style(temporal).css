@@ -1,13 +1,17 @@
-path {
+.pth {
   transition: hover .1s ease, stroke-width .5s ease-out, stroke .5s ease-out;
+  opacity: 0.5;
 }
 
-path:hover {
-  fill: #5a5a5a !important;
+.pth:hover {
+  stroke: #ff8a8a !important;
+  stroke-width: 5 !important;
+  transition: 0.1s;
+  opacity: 1;
 }
 
-path:active {
-  stroke: #5a5a5a !important;
+.pth:active {
+  stroke: #ff8a8a !important;
   stroke-width: 5 !important;
 }
 
@@ -18,8 +22,7 @@ path:active {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000;
-  opacity: .5;
+  opacity: .4;
 }
 
 .modal-wrapper {
@@ -28,9 +31,9 @@ path:active {
   left: 0;
   z-index: 1050;
   width: 100%;
-  height: 100%;
+  height: 80vh;
+  margin: 10vh 0;
   overflow-x: hidden;
-  overflow-y: auto;
   outline: 0;
 }
 
@@ -38,7 +41,8 @@ path:active {
   z-index: 100;
   background: white;
   position: relative;
-  margin: 1.75rem auto;
+  margin: 0 auto;
+  overflow-y: auto;
   border-radius: 3px;
   max-width: 500px;
   padding: 2rem;
@@ -51,19 +55,20 @@ path:active {
 
 .modal-close-button {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
-  color: #000;
-  opacity: .3;
+  background-color: rgb(192, 192, 192);
+  color: rgb(36, 36, 36);
   cursor: pointer;
   border: none;
 }
 
+.modal-close-button:hover {
+  background-color: #4c98bb;
+  color: rgb(255, 255, 255);
+}
+
 button {
-  font-size: .9rem;
-  font-weight: 700;
   border: none;
-  border-radius: 3px;
-  padding: .3rem 1rem;
-  margin-left: .5rem;
+  border-radius: 2px;
 }

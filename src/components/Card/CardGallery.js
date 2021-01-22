@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const CardGallery = ({ id }) => {
+
   return (
     <>
       <ul>
