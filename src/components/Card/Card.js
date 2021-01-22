@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CardGallery } from './CardGallery';
 import { CardInfo } from './CardInfo';
 
 export const Card = ({ name, description, isShowing, hide, color }) => isShowing ? ReactDOM.createPortal(
@@ -14,7 +13,6 @@ export const Card = ({ name, description, isShowing, hide, color }) => isShowing
           </button>
         </div>
         <CardInfo name={ name } description={ description }/>
-        <CardGallery id={ name }/>
       </div>
     </div>
   </>, document.body
