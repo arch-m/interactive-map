@@ -1,0 +1,67 @@
+.btn{
+    color: #c6f8fc;
+    background-color: transparent;
+    fill: #c6f8fc;
+    font-size: 2.3em;
+    padding: 0;
+    margin: 0;
+    line-height: 0%;
+    transition: 0.2s ease;
+}
+
+.btn path:hover{
+    fill: #4c98bb !important;
+}
+
+.btn:hover{
+    color: #4c98bb;
+    background-color: #c6f8fc;
+    transition: 0.2s ease;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.active{
+    margin-left: -197px !important;
+    transition: ease  0.5s ;
+}
+
+.show{
+    transition: ease 0.5s;
+}
+
+.hidden{
+    animation: fadeOut ease 0.2s;
+    -webkit-animation: fadeOut ease 0.2s;
+    -moz-animation: fadeOut ease 0.2s;
+    -o-animation: fadeOut ease 0.2s;
+    -ms-animation: fadeOut ease 0.2s;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-o-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-ms-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}

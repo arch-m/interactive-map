@@ -1,10 +1,11 @@
 import React from 'react';
 import { useFetchStatesData } from '../../hooks/useFetchData';
 import { MapState } from './MapState';
-
+import getRandomColor from './Colors';
 
 
 export const MapStateList = () => {
+
 
   const { data:states, loading } = useFetchStatesData();
 
@@ -16,6 +17,7 @@ export const MapStateList = () => {
         states.map(state => (
           <MapState 
             key={ state.id }
+            color={ getRandomColor() }
             { ...state } 
           />
         ))
