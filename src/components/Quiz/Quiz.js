@@ -26,7 +26,7 @@ export default function Quiz({ questions }) {
   return (
     <div style={backgroundStyle} className='h-100 d-flex flex-column justify-content-center align-items-center' >
       {showScore ? (
-        <h1 className={Style.header} Style>
+        <h1 className={Style.header}>
           Resolviste bien {score} de {questions.length}!
         </h1>
       ) : (
